@@ -1,5 +1,6 @@
 function getColorsArray(imgData) {
 	var arrayIndex = 0;
+	var fullColors = [];
 	
 	var pixel = {color:"333, 333, 333", freq:0};
 	fullColors[0] = pixel;
@@ -35,4 +36,19 @@ function getColorsArray(imgData) {
 			fullColors[arrayIndex] = pixel;
 		}
 	}
+	
+	//call sort
+	fullColors.sort(sortByFreq);
+	
+	//sort function (greatest to least)
+	function sortByFreq(a, b) {
+		if (a['freq'] === b['freq']) {
+			return 0;
+		}
+		else {
+			return (a['freq'] < b['freq']) ? 1 : -1;
+		}
+	}
+	
+	return fullColors;
 }
