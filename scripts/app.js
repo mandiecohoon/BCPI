@@ -15,7 +15,7 @@ app.config(['$routeProvider', '$locationProvider',
 
     $routeProvider
       .when('/', {
-        templateUrl: 'views/colorRank.html',
+        templateUrl: '..views/colorRank.html',
         controller: 'ColorRankCtrl'
       })
       .otherwise({ redirectTo: '/' });
