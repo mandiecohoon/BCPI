@@ -30,7 +30,7 @@ angular.module('ColorRank',[]).controller('ColorRankCtrl', function($scope) {
   };
 
   // Returns an array containing the colors and their frequencies
-  function getColorsArray(imgData) {
+  $scope.getColorsArray = function (imgData) {
     var arrayIndex = 0;
     var fullColors = [];
 
@@ -86,7 +86,7 @@ angular.module('ColorRank',[]).controller('ColorRankCtrl', function($scope) {
   }
 
   // Coolhoon function
-  function cool(f) {
+  $scope.cool = function (f) {
     //Get image and set its source
     var img = new Image();
     img.src = f;
