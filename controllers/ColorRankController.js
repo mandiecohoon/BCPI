@@ -7,6 +7,8 @@ angular.module('ColorRank',[]).controller('ColorRankCtrl', function($scope) {
     url: ""
   };
 
+  filepicker.setKey("AvKg0zzXeRNquaFMJdqfoz");
+
   // Calls FilePicker API pick function, to set Profile Picture
   $scope.pickFile = function() {
     filepicker.pick(
