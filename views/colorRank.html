@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 center-block">
+            <img ng-src="formImage.url">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 text-center">
+            <a class="btn btn-primary margin-topbottom-10"
+               ng-click="pickFile()">
+                <span class="glyphicon glyphicon-picture"></span>
+                <strong>Choose Image</strong>
+            </a>
+        </div>
+        <div class="col-md-3 text-center">
+            <a class="btn btn-primary margin-topbottom-10"
+               ng-click="cool({{formImage.url}})">
+                <span class="glyphicon glyphicon-picture"></span>
+                <strong>Evaluate Image</strong>
+            </a>
+        </div>
+    </div>
+
+</div>
