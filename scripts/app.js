@@ -5,6 +5,9 @@
 // Modules
 var app = angular.module("app",
   [
+    'ngResource',
+    'ngRoute',
+    'ui.bootstrap',
     'Main',
     'ColorRank'
   ]);
@@ -20,5 +23,5 @@ app.config(['$routeProvider', '$locationProvider',
       })
       .otherwise({ redirectTo: '/' });
 
-    $locationProvider.html5mode(true);
+    $locationProvider.html5Mode(true);
   }]);
