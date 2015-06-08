@@ -4,7 +4,7 @@
 angular.module('ColorRank',[]).controller('ColorRankCtrl', function($scope) {
 
   $scope.formImage = {
-    url: ""
+    url: "http://triplecrit.com/wp-content/themes/creativemag/images/default.png"
   };
 
   filepicker.setKey("AvKg0zzXeRNquaFMJdqfoz");
