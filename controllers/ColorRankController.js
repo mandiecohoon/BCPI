@@ -102,13 +102,14 @@ angular.module('ColorRank',[]).controller('ColorRankCtrl', function($scope) {
     // Try/Catch to circumvent FireFox security error
     try {
       ctx.drawImage(img, 0, 0);
+
+    var imgData=ctx.getImageData(0,0,c.width,c.height);
+
     } catch(e) {
       if(e.name !== 'SecurityError')
         throw e;
       return;
     }
-    var imgData=ctx.getImageData(0,0,c.width,c.height);
-
     var arrayIndex = 0; //because the for loop goes up by 4, the array needs index that counts by 1s
 
     //initialize array with dummy pixels so that the "check if pixel color exists then add to freq"
