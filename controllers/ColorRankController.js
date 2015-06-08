@@ -3,7 +3,7 @@
  */
 angular.module('ColorRank',[]).controller('ColorRankCtrl', function($scope) {
 
-  var formImage = {
+  $scope.formImage = {
     url: "http://triplecrit.com/wp-content/themes/creativemag/images/default.png"
   };
 
@@ -91,7 +91,7 @@ angular.module('ColorRank',[]).controller('ColorRankCtrl', function($scope) {
   $scope.cool = function () {
     //Get image and set its source
     var img = new Image();
-    img.src = formImage.url;
+    img.src = $scope.formImage.url;
 
     //define array of all the pixel colors
     var fullColors = [];
