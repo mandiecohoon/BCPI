@@ -161,7 +161,7 @@ angular.module('ColorRank',[]).controller('ColorRankCtrl', function($scope) {
     document.write('<p><div style="width:10px;height:10px;border:1px solid black;background:rgb('+fullColors[2].color+');"></div>Third most: ' + fullColors[2].color + ' with a frequency of: ' +fullColors[2].freq + '</p>');
     document.write('<p><div style="width:10px;height:10px;border:1px solid black;background:rgb('+fullColors[3].color+');"></div>Fourth most: ' + fullColors[3].color + ' with a frequency of: ' +fullColors[3].freq + '</p>');
 
-    console.log(JSON.stringify(fullColors)); //dumping the full array in the console log
+    console.log("Full Color Array: " + JSON.stringify(fullColors)); //dumping the full array in the console log
   }
 
 });
