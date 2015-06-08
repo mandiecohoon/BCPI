@@ -3,7 +3,7 @@
  */
 angular.module('ColorRank',[]).controller('ColorRankCtrl', function($scope) {
 
-  $scope.formImage = {
+  var formImage = {
     url: "http://triplecrit.com/wp-content/themes/creativemag/images/default.png"
   };
 
