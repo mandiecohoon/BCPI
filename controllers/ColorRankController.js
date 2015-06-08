@@ -99,7 +99,14 @@ angular.module('ColorRank',[]).controller('ColorRankCtrl', function($scope) {
     //create canvas to read pixels on the image
     var c=document.getElementById('canvas');
     var ctx=c.getContext('2d');
-    ctx.drawImage(img,0,0);
+    // Try/Catch to circumvent FireFox security error
+    try {
+      ctx.drawImage(img, 0, 0);
+    } catch(e) {
+      if(e.name !== 'SecurityError')
+        throw e;
+      return;
+    }
     var imgData=ctx.getImageData(0,0,c.width,c.height);
 
     var arrayIndex = 0; //because the for loop goes up by 4, the array needs index that counts by 1s
