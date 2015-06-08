@@ -88,10 +88,10 @@ angular.module('ColorRank',[]).controller('ColorRankCtrl', function($scope) {
   }
 
   // Coolhoon function
-  $scope.cool = function (f) {
+  $scope.cool = function () {
     //Get image and set its source
     var img = new Image();
-    img.src = f;
+    img.src = formImage.url;
 
     //define array of all the pixel colors
     var fullColors = [];
