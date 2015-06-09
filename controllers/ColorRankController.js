@@ -41,6 +41,7 @@ angular.module('ColorRank',[]).controller('ColorRankCtrl', function($scope) {
     img.onload = function(){
       ctx.drawImage(img,0,0); // Or at whatever offset you like
     };
+    img.crossOrigin = "Anonymous";
     img.src = $scope.formImage.url;
 
     var imgData=ctx.getImageData(0,0,c.width,c.height);
