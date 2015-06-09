@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" id="colorRankView">
     <div class="row">
         <div class="col-md-6 text-center">
             <div class="row">
@@ -28,33 +28,33 @@
             <div class="row">
                 <table width="100%">
                     <thead>
-                        <th>Rank</th>
-                        <th>Color</th>
-                        <th>RGB</th>
-                        <th>Occurrences</th>
+                        <th class="text-center">Rank</th>
+                        <th class="text-center">Color</th>
+                        <th class="text-center">RGB</th>
+                        <th class="text-center">Occurrences</th>
                     </thead>
                     <tbody>
                         <tr>
                             <td><strong>1st</strong></td>
-                            <td bgcolor="rgb_number({{fullColors[0].color}})"></td>
+                            <td bgcolor="rgb({{fullColors[0].color}})"></td>
                             <td>{{fullColors[0].color}}</td>
                             <td>{{fullColors[3].freq}}</td>
                         </tr>
                         <tr>
                             <td><strong>2nd</strong></td>
-                            <td bgcolor="rgb_number({{fullColors[1].color}})"></td>
+                            <td bgcolor="rgb({{fullColors[1].color}})"></td>
                             <td>{{fullColors[1].color}}</td>
                             <td>{{fullColors[3].freq}}</td>
                         </tr>
                         <tr>
                             <td><strong>3rd</strong></td>
-                            <td bgcolor="rgb_number({{fullColors[2].color}})"></td>
+                            <td bgcolor="rgb({{fullColors[2].color}})"></td>
                             <td>{{fullColors[2].color}}</td>
                             <td>{{fullColors[3].freq}}</td>
                         </tr>
                         <tr>
                             <td><strong>4th</strong></td>
-                            <td bgcolor="rgb_number({{fullColors[3].color}})"></td>
+                            <td bgcolor="rgb({{fullColors[3].color}})"></td>
                             <td>{{fullColors[3].color}}</td>
                             <td>{{fullColors[3].freq}}</td>
                         </tr>
