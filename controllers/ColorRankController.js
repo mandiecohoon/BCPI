@@ -35,8 +35,8 @@ angular.module('ColorRank',[]).controller('ColorRankCtrl', function($scope) {
 
   // Returns an array containing the colors and their frequencies
   $scope.getColorsArray = function() {
-    var c = document.getElementById('canvas');
-    var ctx = c.getContext('2d');
+    var c = document.getElementById("canvas");
+    var ctx = c.getContext("2d");
     var img = new Image();
     img.onload = function(){
       ctx.drawImage(img,0,0); // Or at whatever offset you like
