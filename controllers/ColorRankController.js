@@ -96,6 +96,8 @@ angular.module('ColorRank',[]).controller('ColorRankCtrl', function($scope) {
       }
     }
 
+    console.log("fullColors: " + JSON.stringify($scope.fullColors));
+
   }
 
 
