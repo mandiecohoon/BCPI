@@ -97,11 +97,11 @@ angular.module('ColorRank',[]).controller('ColorRankCtrl', function($scope) {
       }
     }
 
-    document.getElementById("colorRank1").style.background = "rgb(" + fullColors[0].color + ")";
+    document.getElementById("colorRank1").style.background = "rgb(" + $scope.fullColors[0].color + ")";
 
     console.log("fullColors: " + JSON.stringify($scope.fullColors));
 
-  }
+  };
 
 
 });
