@@ -49,9 +49,9 @@ angular.module('ColorRank',[]).controller('ColorRankCtrl', function($scope) {
     var arrayIndex = 0;
     $scope.fullColors = [];
 
-    var pixel = {color:"333, 333, 333", freq:0};
+    var pixel = {color:"255, 255, 255", freq:0};
     $scope.fullColors[0] = pixel;
-    var pixel = {color:"333, 333, 333", freq:0};
+    var pixel = {color:"255, 255, 255", freq:0};
     $scope.fullColors[1] = pixel;
 
     for (var i = 0; i < imgData.data.length; i += 4) {
@@ -96,6 +96,8 @@ angular.module('ColorRank',[]).controller('ColorRankCtrl', function($scope) {
         return (a['freq'] < b['freq']) ? 1 : -1;
       }
     }
+
+    document.getElementById("colorRank1").style.background = "rgb(" + fullColors[0].color + ")";
 
     console.log("fullColors: " + JSON.stringify($scope.fullColors));
 
