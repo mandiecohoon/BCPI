@@ -2,7 +2,9 @@
     <div class="row">
         <div class="col-md-6 text-center">
             <div class="row">
-                <img ng-src="{{formImage.url}}">
+                <img ng-src="{{formImage.url}}"
+                     width="200"
+                     height="200">
             </div>
             <div class="row">
                 <div class="col-md-6 text-center">
@@ -42,19 +44,19 @@
                         </tr>
                         <tr>
                             <td><strong>2nd</strong></td>
-                            <td bgcolor="rgb({{fullColors[1].color}})"></td>
+                            <td id="colorRank2"></td>
                             <td>{{fullColors[1].color}}</td>
                             <td>{{fullColors[1].freq}}</td>
                         </tr>
                         <tr>
                             <td><strong>3rd</strong></td>
-                            <td bgcolor="rgb({{fullColors[2].color}})"></td>
+                            <td id="colorRank3"></td>
                             <td>{{fullColors[2].color}}</td>
                             <td>{{fullColors[2].freq}}</td>
                         </tr>
                         <tr>
                             <td><strong>4th</strong></td>
-                            <td bgcolor="rgb({{fullColors[3].color}})"></td>
+                            <td id="colorRank4"></td>
                             <td>{{fullColors[3].color}}</td>
                             <td>{{fullColors[3].freq}}</td>
                         </tr>
