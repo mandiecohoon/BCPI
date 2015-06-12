@@ -47,18 +47,10 @@ angular.module('ColorRank',[]).controller('ColorRankCtrl', function($scope) {
 
     ctx.drawImage(img,0,0); // Or at whatever offset you like
     var imgData=ctx.getImageData(0,0,canvas.width,canvas.height);
-    //var imgData=img.getImageData(0,0,img.width,img.height);
-
-    //var arrayIndex = 0;
-
-    //var pixel = {color:"255, 255, 255", freq:0};
-    //$scope.fullColors[0] = pixel;
-    //var pixel = {color:"255, 255, 255", freq:0};
-    //$scope.fullColors[1] = pixel;
 
     console.log("fullColors before count: " + JSON.stringify($scope.fullColors));
 
-    // loop to count and sort colors
+    // loop to count colors
     console.log("imgData: " + JSON.stringify(imgData));
     for (var i = 0; i < imgData.data.length; i += 4) {
       //select colors: red, green, blue, and alpha
@@ -71,9 +63,6 @@ angular.module('ColorRank',[]).controller('ColorRankCtrl', function($scope) {
       var currentColor = r + ', ' + g + ', ' + b;
 
       colorIdx = -1;
-
-      //Flag if color exists stop looking & don't add it to the array
-      //var flagColorExists = false;
 
       // Add color to fullColors array if it hasn't been already
       if (!doesColorExist(currentColor)) {
@@ -91,26 +80,6 @@ angular.module('ColorRank',[]).controller('ColorRankCtrl', function($scope) {
           console.log("ERROR: Could not add 1 to frequency. " + err);
         }
       }
-
-      ////check if color exists- if true then increase frequency
-      //for (var j = 0; j < $scope.fullColors.length; j++) {
-      //  if ($scope.fullColors[j]) {
-      //    console.log("fullColors[" + j + "] exists.");
-      //    if ($scope.fullColors[j].color == color && flagColorExists == false) {
-      //      $scope.fullColors[j].freq = $scope.fullColors[j].freq + 1;
-      //      console.log("fullColors[" + j + "] frequency increased to " + $scope.fullColors[j].freq);
-      //      flagColorExists = true;
-      //    }
-      //  }
-      //}
-
-      ////If color exists flag is FALSE then add the color to the array
-      //if(!flagColorExists) {
-      //  arrayIndex++; // add to the array index
-      //  //create nested array of each pixel color and the frequency the color shows up
-      //  var pixel = {color:color, freq:1};
-      //  $scope.fullColors[arrayIndex] = pixel;
-      //}
     }
 
     //call sort
@@ -130,15 +99,11 @@ angular.module('ColorRank',[]).controller('ColorRankCtrl', function($scope) {
     // Return true if color has already been found in image
     function doesColorExist (cl) {
       var colorFound = false;
-      //console.log("fullColors.length: " + $scope.fullColors.length);
-      //if ($scope.fullColors.length < 2)
-        //console.log("fullColors: " + JSON.stringify($scope.fullColors));
       if ($scope.fullColors.length > 0) {
         for (var i = 0; i < $scope.fullColors.length; i++) {
           if ($scope.fullColors[i].color == cl) {
             colorIdx = i;
             colorFound = true;
-            //console.log("Color " + cl + " found. i is " + i + ". colorIdx is " + colorIdx + ".");
             i = $scope.fullColors.length;
           }
         }
